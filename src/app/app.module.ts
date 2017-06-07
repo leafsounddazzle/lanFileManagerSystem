@@ -4,10 +4,23 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCheckboxModule } from '@angular/material';
+// import { MdButtonModule, MdCheckboxModule } from '@angular/material';
+import { MaterialModule } from '@angular/material';
 
 import { App } from './app.component';
+import { AppState,InternalStateType } from './app.service';
 import { routing } from './app.routing';
+import { PagesModule } from './pages/pages.module';
+
+const APP_PROVIDERS = [
+  AppState
+];
+
+export type StoreType = {
+  state: InternalStateType,
+  restoreInputValues: () => void,
+  disposeOldHosts: () => void
+};
 
 @NgModule({
   declarations: [
@@ -20,11 +33,16 @@ import { routing } from './app.routing';
     RouterModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MdButtonModule,
-    MdCheckboxModule,
+    MaterialModule.forRoot(),
+    PagesModule,
     routing
   ],
-  providers: [],
+  providers: [
+    APP_PROVIDERS
+  ],
   bootstrap: [App]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(public appState: AppState) {
+  }
+}
