@@ -33,7 +33,7 @@ export type StoreType = {
     RouterModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     PagesModule,
     routing
   ],

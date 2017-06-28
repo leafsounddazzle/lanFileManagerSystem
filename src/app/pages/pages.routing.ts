@@ -6,6 +6,16 @@ export const routes: Routes = [
   {
     path: 'login',
     loadChildren: 'app/pages/login/login.module#LoginModule'
+  // }, {
+  //   path: 'register',
+  //   loadChildren: 'app/pages/register/register.module#RegisterModule'
+  // }, {
+  //   path: 'pages',
+  //   component: Pages,
+  //   children: [
+  //     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  //     { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' }
+  //   ]
   }
 ];
 
