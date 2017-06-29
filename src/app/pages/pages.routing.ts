@@ -9,13 +9,13 @@ export const routes: Routes = [
   // }, {
   //   path: 'register',
   //   loadChildren: 'app/pages/register/register.module#RegisterModule'
-  // }, {
-  //   path: 'pages',
-  //   component: Pages,
-  //   children: [
-  //     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  //     { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' }
-  //   ]
+  }, {
+    path: 'pages',
+    component: Pages,
+    children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' }, //默认路由
+      { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' }
+    ]
   }
 ];
 

@@ -1,21 +1,23 @@
-<ba-sidebar></ba-sidebar>
-<ba-page-top></ba-page-top>
-<div class="al-main">
-  <div class="al-content">
-    <ba-content-top></ba-content-top>
+<md-sidenav-container>
+  <md-sidenav #sidenav mode="side" class="app-sidenav">
+    Sidenav
+  </md-sidenav>
+  <md-toolbar color="primary">
+    <!--<button class="app-icon-button" (click)="sidenav.toggle()">-->
+    <!--<i class="material-icons app-toolbar-menu">menu</i>-->
+    <!--</button>-->
+    <!--<button md-button class="material-icons app-toolbar-menu" (click)="sidenav.toggle()>menu</button>-->
+    <!--<md-icon class="demo-toolbar-icon" (click)="sidenav.toggle()">menu</md-icon>-->
+    <button md-button (click)="sidenav.toggle()">
+      <md-icon class="md-24">menu</md-icon>
+    </button>
+
+    Angular Material2 Example App
+
+    <span class="app-toolbar-filler"></span>
+    <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
+  </md-toolbar>
+  <div class="app-content">
     <router-outlet></router-outlet>
   </div>
-</div>
-<footer class="al-footer clearfix">
-  <div class="al-footer-right" translate>{{'general.created_with'}} <i class="ion-heart"></i></div>
-  <div class="al-footer-main clearfix">
-    <div class="al-copy">&copy; <a href="http://akveo.com" translate>{{'general.akveo'}}</a> 2016</div>
-    <ul class="al-share clearfix">
-      <li><i class="socicon socicon-facebook"></i></li>
-      <li><i class="socicon socicon-twitter"></i></li>
-      <li><i class="socicon socicon-google"></i></li>
-      <li><i class="socicon socicon-github"></i></li>
-    </ul>
-  </div>
-</footer>
-<ba-back-top position="200"></ba-back-top>
+</md-sidenav-container>

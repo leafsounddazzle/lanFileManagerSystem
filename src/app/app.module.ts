@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MdButtonModule, MdCheckboxModule } from '@angular/material';
 import { MaterialModule } from '@angular/material';
+import { MdButtonModule,MdCardModule,MdIconModule } from '@angular/material';
 
 import { App } from './app.component';
 import { AppState,InternalStateType } from './app.service';
@@ -34,6 +35,9 @@ export type StoreType = {
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MaterialModule,
+    MdButtonModule,
+    MdCardModule,
+    MdIconModule,
     PagesModule,
     routing
   ],
