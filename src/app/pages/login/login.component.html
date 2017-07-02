@@ -1,56 +1,19 @@
-<md-sidenav-container>
-  <md-sidenav #sidenav mode="side" class="app-sidenav">
-    Sidenav
-  </md-sidenav>
-  <md-toolbar color="primary">
-    <!--<button class="app-icon-button" (click)="sidenav.toggle()">-->
-      <!--<i class="material-icons app-toolbar-menu">menu</i>-->
-    <!--</button>-->
-    <!--<button md-button class="material-icons app-toolbar-menu" (click)="sidenav.toggle()>menu</button>-->
-    <!--<md-icon class="demo-toolbar-icon" (click)="sidenav.toggle()">menu</md-icon>-->
-    <button md-button (click)="sidenav.toggle()">
-      <md-icon class="md-24">menu</md-icon>
-    </button>
-
-    Angular Material2 Example App
-
-    <span class="app-toolbar-filler"></span>
-    <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
-  </md-toolbar>
-  <div class="app-content">
-    <md-card>
-      <button md-button>FLAT</button>
-      <button md-raised-button md-tooltip="This is a tooltip!">RAISED</button>
-      <button md-raised-button color="primary">PRIMARY RAISED</button>
-      <button md-raised-button color="accent">ACCENT RAISED</button>
-    </md-card>
-
-    <md-card>
-      <md-checkbox>Unchecked</md-checkbox>
-      <md-checkbox [checked]="true">Checked</md-checkbox>
-      <md-checkbox [indeterminate]="true">Indeterminate</md-checkbox>
-      <md-checkbox [disabled]="true">Disabled</md-checkbox>
-    </md-card>
-  </div>
-</md-sidenav-container>
-
-<md-card class="login-card">
-  <md-card-header>
-    <h2>登陆</h2>
-  </md-card-header>
-  <md-card-content>
-    <form class="login-form">
-      <md-input-container class="full-width-input">
-        <input mdInput placeholder="用户名">
-      </md-input-container>
-      <md-input-container class="full-width-input">
-        <input mdInput placeholder="密码" type="password">
-      </md-input-container>
-    </form>
-  </md-card-content>
-  <button md-raised-button color="primary">登陆</button>
-  <button md-raised-button color="accent">注册</button>
-  <md-card-actions>
-
-  </md-card-actions>
-</md-card>
+<div class="login-main">
+  <md-card class="login-card">
+    <md-card-title>登陆</md-card-title>
+    <md-card-content>
+      <form class="login-form">
+        <md-input-container class="full-width-input">
+          <input mdInput placeholder="用户名">
+        </md-input-container>
+        <md-input-container class="full-width-input">
+          <input mdInput placeholder="密码" type="password">
+        </md-input-container>
+      </form>
+    </md-card-content>
+    <md-card-actions align="center">
+      <button md-raised-button color="primary" (click)="">登陆</button>
+      <button md-raised-button color="accent">注册</button>
+    </md-card-actions>
+  </md-card>
+</div>

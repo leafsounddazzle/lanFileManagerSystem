@@ -1,22 +1,18 @@
-<md-sidenav-container>
+<md-toolbar color="primary">
+  <button md-icon-button (click)="sidenav.toggle()">
+    <md-icon class="md-24">menu</md-icon>
+  </button>
+  <div class="app-toolbar">
+    <h1>file management system web front end</h1>
+    <div>
+      <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
+    </div>
+  </div>
+</md-toolbar>
+<md-sidenav-container class="app-sidenav-container">
   <md-sidenav #sidenav mode="side" class="app-sidenav">
     Sidenav
   </md-sidenav>
-  <md-toolbar color="primary">
-    <!--<button class="app-icon-button" (click)="sidenav.toggle()">-->
-    <!--<i class="material-icons app-toolbar-menu">menu</i>-->
-    <!--</button>-->
-    <!--<button md-button class="material-icons app-toolbar-menu" (click)="sidenav.toggle()>menu</button>-->
-    <!--<md-icon class="demo-toolbar-icon" (click)="sidenav.toggle()">menu</md-icon>-->
-    <button md-button (click)="sidenav.toggle()">
-      <md-icon class="md-24">menu</md-icon>
-    </button>
-
-    Angular Material2 Example App
-
-    <span class="app-toolbar-filler"></span>
-    <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
-  </md-toolbar>
   <div class="app-content">
     <router-outlet></router-outlet>
   </div>

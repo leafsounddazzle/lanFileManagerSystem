@@ -1,0 +1,15 @@
+.full-width-input {
+  width: 100%;
+}
+
+.login-main {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  .login-card{
+    width: 500px;
+    margin: 0 auto;
+  }
+}

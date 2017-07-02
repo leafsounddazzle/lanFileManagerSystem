@@ -6,11 +6,12 @@ import { BaMenuService } from '../theme';
 
 @Component({
   selector: 'pages',
-  // templateUrl: './pages.component.html',
-  template: `
-  <div>pages components work!</div>
-  `
-  // styleUrls: ['./pages.component.css']
+  templateUrl: './pages.component.html',
+  // template: `
+  // <div>pages components work!</div>
+  // `
+  styleUrls: ['./pages.component.scss']
+  
 })
 export class Pages {
 
