@@ -11,7 +11,7 @@ import { BaMenuService } from '../theme';
   // <div>pages components work!</div>
   // `
   styleUrls: ['./pages.component.scss']
-  
+
 })
 export class Pages {
 

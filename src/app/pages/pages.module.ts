@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { MaterialModule } from '@angular/material';
 import { routing }       from './pages.routing';
 import { Pages } from './pages.component';
-import { MaterialModule } from '@angular/material';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   imports: [
@@ -11,6 +12,6 @@ import { MaterialModule } from '@angular/material';
     MaterialModule,
     routing
   ],
-  declarations: [Pages]
+  declarations: [Pages, MenuComponent]
 })
 export class PagesModule { }

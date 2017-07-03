@@ -23,23 +23,45 @@ export type StoreType = {
   disposeOldHosts: () => void
 };
 
+const IMPORT_ITEMS1 = [
+  BrowserModule,
+  FormsModule,
+  HttpModule
+];
+
+const IMPORT_ITEMS2 = [
+  RouterModule,
+  ReactiveFormsModule,
+  BrowserAnimationsModule,
+  MaterialModule,
+  MdButtonModule,
+  MdCardModule,
+  MdIconModule,
+  PagesModule,
+  routing
+];
+
 @NgModule({
   declarations: [
     App
   ],
+  // imports: [
+  //   BrowserModule,
+  //   FormsModule,
+  //   HttpModule,
+  //   RouterModule,
+  //   ReactiveFormsModule,
+  //   BrowserAnimationsModule,
+  //   MaterialModule,
+  //   MdButtonModule,
+  //   MdCardModule,
+  //   MdIconModule,
+  //   PagesModule,
+  //   routing
+  // ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    RouterModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    MdButtonModule,
-    MdCardModule,
-    MdIconModule,
-    PagesModule,
-    routing
+    ...IMPORT_ITEMS1,
+    ...IMPORT_ITEMS2
   ],
   providers: [
     APP_PROVIDERS
