@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TreeModule } from 'angular-tree-component/dist/angular-tree-component';
+
 
 @Component({
   selector: 'app-menu',
