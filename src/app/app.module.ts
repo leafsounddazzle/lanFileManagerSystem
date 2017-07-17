@@ -10,11 +10,13 @@ import { MdButtonModule,MdCardModule,MdIconModule } from '@angular/material';
 
 import { App } from './app.component';
 import { AppState,InternalStateType } from './app.service';
+import { GlobalState } from './global.state';
 import { routing } from './app.routing';
 import { PagesModule } from './pages/pages.module';
 
 const APP_PROVIDERS = [
-  AppState
+  AppState,
+  GlobalState
 ];
 
 export type StoreType = {

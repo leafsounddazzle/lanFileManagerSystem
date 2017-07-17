@@ -1,4 +1,5 @@
-<div class="login-main">
+
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="login-main">
   <md-card class="login-card">
     <md-card-title>登陆</md-card-title>
     <md-card-content>
@@ -12,8 +13,8 @@
       </form>
     </md-card-content>
     <md-card-actions align="center">
-      <button md-raised-button color="primary" (click)="">登陆</button>
+      <button md-raised-button color="primary">登陆</button>
       <button md-raised-button color="accent">注册</button>
     </md-card-actions>
   </md-card>
-</div>
+</form>
