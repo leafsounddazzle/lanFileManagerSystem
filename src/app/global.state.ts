@@ -14,6 +14,28 @@ export class GlobalState {
     this._dataStream$.subscribe((data) => this._onEvent(data));
   }
 
+  /**
+   * 触发全局事件
+   * @param event
+   * @param value
+   */
+  notifyDataChanged (event, value) {
+    let current = this._data[event];
+    if (current !== value){
+      this._data[event] = value;
+
+      this._data.next({
+        event: event,
+        data: this._data[event]
+      });
+    }
+  }
+
+  /**
+   * 订阅全局事件
+   * @param event
+   * @param callback
+   */
   subscribe(event: string, callback: Function) {
     let subscribers = this._subscriptions.get(event) || [];
     subscribers.push(callback);
