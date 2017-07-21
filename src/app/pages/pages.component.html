@@ -1,28 +1,45 @@
 <md-sidenav-container class="app-sidenav-container">
-  <md-toolbar color="primary">
+  <md-toolbar color="default">
     <button md-icon-button (click)="sidenav.toggle()">
       <md-icon class="md-24">menu</md-icon>
     </button>
     <div class="app-toolbar">
-      <h1>file management system web front end</h1>
-      <div>
-        <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
-      </div>
+      <h1>file system</h1>
+      <!--<div>-->
+        <!--<button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>-->
+      <!--</div>-->
     </div>
   </md-toolbar>
-  <md-sidenav #sidenav mode="side" class="app-sidenav">
+  <md-sidenav #sidenav mode="over" class="app-sidenav">
     <span id="logo"><md-icon>adjust</md-icon>FireBox</span>
-    <md-nav-list>
-      <a md-list-item class="md-list-item"><md-icon color="default">folder</md-icon>文件</a>
-      <a md-list-item class="md-list-item"><md-icon color="default">share</md-icon>共享</a>
-      <a md-list-item class="md-list-item"><md-icon color="default">settings</md-icon>设置</a>
-      <a md-list-item class="md-list-item"><md-icon color="default">help</md-icon>关于</a>
-      <a md-list-item (click)="sidenav.close()">Baseline</a>
-      <!--<a md-list-item (click)="sidenav.close()" [routerLink]="['baseline']">Baseline</a>-->
-    </md-nav-list>
-
+    <app-menu></app-menu>
   </md-sidenav>
   <div class="app-content">
+
+    <div class="containerX">
+      <!--<div fxLayout="row wrap" class="colored box nopad" >-->
+        <!--<div fxFlex="none">     [flex="none"]       </div>-->
+        <!--<div fxFlex>            [flex]              </div>-->
+        <!--<div fxFlex="nogrow">   [flex="nogrow"]     </div>-->
+        <!--<div fxFlex="grow">     [flex="grow"]       </div>-->
+        <!--<div fxFlex="33.33%">   [flex="33.33%"]     </div>-->
+        <!--<div fxFlex="33.33%">   [flex="33.33%"]     </div>-->
+        <!--<div fxFlex="33.33%">   [flex="33.33%"]     </div>-->
+      <!--</div>-->
+
+      <div fxLayout="row">
+        <div fxFlex="25%" fxFlex.gt-sm="50%">1. One</div>
+        <div fxFlex="25%" fxFlex.gt-sm="50%">2. Two</div>
+        <div fxFlex="25%" fxFlex.gt-sm="50%">3. Three</div>
+        <div fxFlex="25%" fxFlex.sm="50%">4. Four</div>
+      </div>
+    </div>
+
+    <div fxLayout="column">
+      <div>1. One</div> <div>2. Two</div> <div>3. Three</div> <div>4. Four</div>
+    </div>
+
+
     <router-outlet></router-outlet>
   </div>
 </md-sidenav-container>

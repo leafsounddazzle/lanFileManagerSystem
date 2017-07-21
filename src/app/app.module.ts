@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MdButtonModule, MdCheckboxModule } from '@angular/material';
 import { MaterialModule } from '@angular/material';
 import { MdButtonModule,MdCardModule,MdIconModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { App } from './app.component';
 import { AppState,InternalStateType } from './app.service';
@@ -28,11 +29,12 @@ export type StoreType = {
 const IMPORT_ITEMS1 = [
   BrowserModule,
   FormsModule,
-  HttpModule
+  HttpModule,
+  RouterModule
 ];
 
 const IMPORT_ITEMS2 = [
-  RouterModule,
+  FlexLayoutModule,
   ReactiveFormsModule,
   BrowserAnimationsModule,
   MaterialModule,
@@ -47,20 +49,6 @@ const IMPORT_ITEMS2 = [
   declarations: [
     App
   ],
-  // imports: [
-  //   BrowserModule,
-  //   FormsModule,
-  //   HttpModule,
-  //   RouterModule,
-  //   ReactiveFormsModule,
-  //   BrowserAnimationsModule,
-  //   MaterialModule,
-  //   MdButtonModule,
-  //   MdCardModule,
-  //   MdIconModule,
-  //   PagesModule,
-  //   routing
-  // ],
   imports: [
     ...IMPORT_ITEMS1,
     ...IMPORT_ITEMS2
@@ -72,5 +60,6 @@ const IMPORT_ITEMS2 = [
 })
 export class AppModule {
   constructor(public appState: AppState) {
+
   }
 }

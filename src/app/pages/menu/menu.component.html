@@ -1,3 +1,8 @@
-<p>
-  menu works!
-</p>
+<md-nav-list class="menu-main">
+  <a md-list-item class="md-list-item"><md-icon color="default" >folder</md-icon>文件</a>
+  <a md-list-item class="md-list-item"><md-icon color="default">share</md-icon>共享</a>
+  <a md-list-item class="md-list-item"><md-icon color="default">settings</md-icon>设置</a>
+  <a md-list-item class="md-list-item"><md-icon color="default">help</md-icon>关于</a>
+  <a md-list-item (click)="sidenav.close()" class="close-item"><md-icon>close</md-icon></a>
+  <!--<a md-list-item (click)="sidenav.close()" [routerLink]="['baseline']">Baseline</a>-->
+</md-nav-list>

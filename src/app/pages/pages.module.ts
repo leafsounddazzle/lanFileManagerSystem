@@ -5,12 +5,14 @@ import { MaterialModule } from '@angular/material';
 import { routing }       from './pages.routing';
 import { Pages } from './pages.component';
 import { MenuComponent } from './menu/menu.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
-    routing
+    routing,
+    FlexLayoutModule
   ],
   declarations: [Pages, MenuComponent]
 })
