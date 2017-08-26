@@ -19,7 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
+        "styles.scss",
+        "app/theme/theme.scss",
         "../node_modules/material-design-icons/iconfont/material-icons.css"
       ],
       "scripts": [],
@@ -52,10 +53,6 @@
     }
   },
   "defaults": {
-    "serve": {
-      "port": 4201,
-      "host": "127.0.0.1"
-    },
     "styleExt": "scss",
     "component": {}
   }

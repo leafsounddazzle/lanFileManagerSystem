@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import * as $ from 'jquery';
 
 
@@ -17,10 +17,14 @@ import * as $ from 'jquery';
   `,
   styleUrls: ['./app.component.scss']
 })
-export class App {
+export class App implements OnInit{
   constructor() {
-
   }
+
+  ngOnInit() {
+    $('.loading').remove();
+  }
+
   isMenuCollapsed: boolean = false;
   title = 'app';
 }

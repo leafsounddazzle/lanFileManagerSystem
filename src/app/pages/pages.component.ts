@@ -15,7 +15,7 @@ export class Pages {
   constructor() { }
 
   ngOnInit() {
-    
+
   }
 
 }

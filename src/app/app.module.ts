@@ -11,13 +11,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { App } from './app.component';
 import { AppState,InternalStateType } from './app.service';
-import { GlobalState } from './global.state';
+// import { GlobalState } from './global.state';
 import { routing } from './app.routing';
 import { PagesModule } from './pages/pages.module';
 
 const APP_PROVIDERS = [
   AppState,
-  GlobalState
+  // GlobalState
 ];
 
 export type StoreType = {

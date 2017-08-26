@@ -5,14 +5,15 @@ import { MaterialModule } from '@angular/material';
 import { routing }       from './pages.routing';
 import { Pages } from './pages.component';
 import { MenuComponent } from './menu/menu.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { TreeModule } from "angular-tree-component"
+
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
     routing,
-    FlexLayoutModule
+    TreeModule
   ],
   declarations: [Pages, MenuComponent]
 })
