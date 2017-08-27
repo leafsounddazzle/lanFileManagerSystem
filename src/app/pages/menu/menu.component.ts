@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TreeModule, TreeNode} from "angular-tree-component"
+import * as $ from 'jquery';
 
 
 
@@ -10,7 +11,6 @@ import {TreeModule, TreeNode} from "angular-tree-component"
 })
 export class MenuComponent implements OnInit {
   nodes: any[];
-  customOptions: object;
 
   constructor() { }
 
@@ -18,7 +18,9 @@ export class MenuComponent implements OnInit {
     this.nodes = [
       {
         id: 1,
-        name: 'root1',
+        name: '文件',
+        alias: 'file',
+        icon: 'folder',
         children: [
           { id: 2, name: 'child1' },
           { id: 3, name: 'child2' }
@@ -26,7 +28,9 @@ export class MenuComponent implements OnInit {
       },
       {
         id: 4,
-        name: 'root2',
+        name: '最近访问',
+        alias: 'recents',
+        icon: 'history',
         children: [
           { id: 5, name: 'child2.1' },
           {
@@ -40,18 +44,45 @@ export class MenuComponent implements OnInit {
       },
       {
         id: 8,
-        name: "root3"
+        name: '共享',
+        alias: "share",
+        icon: "share"
+      },
+      {
+        id: 9,
+        name: '关于',
+        alias: "about",
+        icon: "help"
       }
     ];
-    this.customOptions = {
-      nodeClass: (node: TreeNode) => {
-        return 'icon-';
-      }
-    };
   }
 
   go($event) {
     $event.stopPropagation();
     alert('this method is on the app component');
+  }
+
+  customOptions = {
+    nodeClass: (node: TreeNode) => {
+      // console.log(node);
+      // return 'node' + node.data.name;
+    },
+    animateExpand: true,
+    // animateSpeed: 30
+    // animateAcceleration: 600
+  };
+
+  // onEvent = ($event) => {
+  //   console.log($event);
+  // }
+
+  onActive = ($event) => {
+    console.log("active!");
+    console.log($event);
+  };
+
+  onFocus = ($event) => {
+    console.log("focus!");
+    console.log($event);
   }
 }

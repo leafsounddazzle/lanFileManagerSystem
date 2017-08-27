@@ -5,14 +5,14 @@
   <!--<a md-list-item class="md-list-item"><md-icon color="default">help</md-icon>关于</a>-->
 <!--</md-nav-list>-->
 
-
 <tree-root [nodes]="nodes"
-           [options]="customOptions">
-  <md-nav-list>
-    <ng-template #treeNodeTemplate let-node let-index="index">
-      <md-icon color="default">home</md-icon>
-      <span>{{ node.data.name }}</span>
-      <!--<button md-raised-button (click)="go($event)">Custom Action</button>-->
-    </ng-template>
-  </md-nav-list>
+           [options]="customOptions"
+           (activate)="onActive($event)"
+           (focus)="onFocus($event)"
+           id="myTree">
+  <ng-template #treeNodeTemplate let-node let-index="index">
+    <md-icon color="default" *ngIf="node.data.icon ? true : false">{{ node.data.icon }}</md-icon>
+    <span>{{ node.data.name }}</span>
+    <!--<button md-raised-button (click)="go($event)">Custom Action</button>-->
+  </ng-template>
 </tree-root>
