@@ -15,11 +15,12 @@
   </div>
 </md-toolbar>
 <md-sidenav-container class="app-sidenav-container">
-  <md-sidenav #sidenav mode="side" class="app-sidenav">
+  <md-sidenav #sidenav  [mode]="isLargeScreen() ? 'side' : 'open'" [opened]="isLargeScreen()" class="app-sidenav">
     <!--<span id="logo"><md-icon>adjust</md-icon>mgher cloud</span>-->
     <app-menu></app-menu>
   </md-sidenav>
   <div class="app-content">
-    <router-outlet></router-outlet>
+    <!--<router-outlet></router-outlet>-->
+    <img [src]="imglink" alt="">
   </div>
 </md-sidenav-container>

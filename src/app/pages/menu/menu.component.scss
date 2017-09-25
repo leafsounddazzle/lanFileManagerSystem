@@ -1,14 +1,38 @@
-md-nav-list .md-list-item {
-  color: #2c2c2c;
-  .mat-icon {
-    padding-right: 20px;
-    color: #6f6f6f;
-  }
-}
+//md-nav-list .md-list-item {
+//  color: #2c2c2c;
+//  .mat-icon {
+//    padding-right: 20px;
+//    color: #6f6f6f;
+//  }
+//}
 md-nav-list .md-list-item.active {
   color: #212121;
   .mat-icon {
     color: #4285f4;
+  }
+}
+
+.active-dot {
+  color: #03A9F4;
+  height: 10px;
+  width: 10px;
+  font-size: 10px;
+  display: none;
+}
+
+md-nav-list a[md-list-item]:active {
+  outline: 2px auto #1e88e5;
+  border: none!important;
+}
+
+md-nav-list a[md-list-item].active{
+  background: #efefef;
+  color: #03A9F4;
+  .menu-item-icon{
+    color: #03A9F4;
+  }
+  .active-dot {
+    display: inline-block;
   }
 }
 

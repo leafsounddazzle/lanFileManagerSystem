@@ -13,7 +13,7 @@ export const routes: Routes = [
     path: 'pages',
     component: Pages,
     children: [
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full' }, //默认路由
+      { path: '', redirectTo: '', pathMatch: 'full' }, //默认路由
       { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' }
     ]
   }

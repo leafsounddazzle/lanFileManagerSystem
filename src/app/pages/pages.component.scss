@@ -62,3 +62,10 @@
   top: 64px;
   height: calc(100vh - 64px);
 }
+
+@media (max-width: 600px) {
+  .app-sidenav {
+    top: 56px;
+    min-height: calc(100vh - 56px);
+  }
+}

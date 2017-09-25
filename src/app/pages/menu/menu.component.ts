@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {TreeModule, TreeNode} from "angular-tree-component"
+// import {TreeModule, TreeNode} from "angular-tree-component"
 import { PAGES_MENU } from "../pages.menu"
 import * as $ from 'jquery';
-
+import { Router } from "@angular/router";
 
 
 @Component({
@@ -11,40 +11,30 @@ import * as $ from 'jquery';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  nodes: any[];
+  // nodes: any[];
+  menus: any[];
+  activeItem: Object;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
-    this.nodes = PAGES_MENU;
+    // this.nodes = PAGES_MENU;
+    this.menus = PAGES_MENU;
   }
 
-  go($event) {
-    $event.stopPropagation();
-    alert('this method is on the app component');
+  go(item: any){
+    this.activeItem = item;
+    // this.router.navigate(item.path);
+    console.log("abc", this.router);
   }
 
-  customOptions = {
-    nodeClass: (node: TreeNode) => {
-      // console.log(node);
-      // return 'node' + node.data.name;
-    },
-    animateExpand: true,
-    // animateSpeed: 30
-    // animateAcceleration: 600
-  };
-
-  // onEvent = ($event) => {
-  //   console.log($event);
-  // }
-
-  onActive = ($event) => {
-    console.log("active!");
-    console.log($event);
-  };
-
-  onFocus = ($event) => {
-    console.log("focus!");
-    console.log($event);
-  }
+  // customOptions = {
+  //   nodeClass: (node: TreeNode) => {
+  //     console.log(node);
+  //     return 'node' + node.data.name;
+  //   },
+  //   animateExpand: true
+  // };
 }

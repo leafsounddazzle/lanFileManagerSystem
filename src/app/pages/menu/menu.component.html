@@ -1,18 +1,12 @@
-<!--<md-nav-list>-->
+<md-nav-list>
   <!--<a md-list-item class="md-list-item active"><md-icon color="default">folder</md-icon>文件</a>-->
   <!--<a md-list-item class="md-list-item"><md-icon color="default">history</md-icon>最近访问</a>-->
   <!--<a md-list-item class="md-list-item"><md-icon color="default">share</md-icon>共享</a>-->
   <!--<a md-list-item class="md-list-item"><md-icon color="default">help</md-icon>关于</a>-->
-<!--</md-nav-list>-->
 
-<tree-root [nodes]="nodes"
-           [options]="customOptions"
-           (activate)="onActive($event)"
-           (focus)="onFocus($event)"
-           id="myTree">
-  <ng-template #treeNodeTemplate let-node let-index="index">
-    <md-icon color="default" *ngIf="node.data.icon ? true : false">{{ node.data.icon }}</md-icon>
-    <span>{{ node.data.name }}</span>
-    <!--<button md-raised-button (click)="go($event)">Custom Action</button>-->
-  </ng-template>
-</tree-root>
+  <a md-list-item *ngFor="let item of menus" (click)="go(item)" [class.active]="item === activeItem">
+    <md-icon md-list-icon color="default" class="menu-item-icon">{{item.icon}}</md-icon>
+    <span md-line>{{ item.name }}</span>
+    <md-icon color="default" class="active-dot">fiber_manual_record</md-icon>
+  </a>
+</md-nav-list>
